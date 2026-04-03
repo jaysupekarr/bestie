@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 For My Beautiful Bestie 💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Segoe UI', 'Poppins', serif;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8ddd3 50%, #f2e6d8 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,245,235,0.9));
+            border-radius: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .floral-border {
+            font-size: 2rem;
+            letter-spacing: 10px;
+            color: #d4a574;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #c9a96e, #b8865e, #8b6914);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            color: #8b5a2b;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .heart-decoration {
+            font-size: 2rem;
+            margin: 20px 0;
+            animation: gentleFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        /* Photo Card */
+        .photo-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.7s ease-out;
+            animation-fill-mode: both;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        .photo-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Staggered animation for cards */
+        .photo-card:nth-child(1) { animation-delay: 0.1s; }
+        .photo-card:nth-child(2) { animation-delay: 0.2s; }
+        .photo-card:nth-child(3) { animation-delay: 0.3s; }
+        .photo-card:nth-child(4) { animation-delay: 0.4s; }
+        .photo-card:nth-child(5) { animation-delay: 0.5s; }
+
+        /* Image styling */
+        .photo-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 25px;
+            text-align: center;
+            background: linear-gradient(to bottom, #fff, #fef9f0);
+        }
+
+        .card-content h3 {
+            color: #b8865e;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            font-family: 'Georgia', serif;
+        }
+
+        .card-content p {
+            color: #6b4c3a;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .emoji-row {
+            font-size: 1.8rem;
+            letter-spacing: 8px;
+        }
+
+        /* Message Section */
+        .message-section {
+            background: linear-gradient(135deg, #fff9f0, #fff5e8);
+            border-radius: 40px;
+            padding: 50px;
+            margin: 50px 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e8d5b5;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .message-section h2 {
+            color: #b8865e;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-family: 'Georgia', serif;
+        }
+
+        .message-section p {
+            color: #5a3e2e;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .signature {
+            font-size: 1.4rem;
+            color: #c9a96e;
+            font-weight: bold;
+            margin-top: 30px;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Reasons Section */
+        .reasons {
+            background: linear-gradient(135deg, #fff9f0, #fff5e8);
+            border-radius: 40px;
+            padding: 50px;
+            margin: 50px 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e8d5b5;
+        }
+
+        .reasons h2 {
+            text-align: center;
+            color: #b8865e;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .reason-item {
+            background: linear-gradient(135deg, #ffffff, #fef9f0);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e8d5b5;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .reason-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #c9a96e;
+        }
+
+        .reason-icon {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .reason-text {
+            font-size: 1rem;
+            color: #5a3e2e;
+            line-height: 1.6;
+        }
+
+        /* Poetry Section */
+        .poetry-section {
+            background: linear-gradient(135deg, #f0e6d8, #f5ede3);
+            border-radius: 40px;
+            padding: 50px;
+            margin: 50px 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #d4c4a8;
+        }
+
+        .poetry-section h2 {
+            color: #b8865e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+        }
+
+        .poem {
+            font-style: italic;
+            color: #6b4c3a;
+            font-size: 1.1rem;
+            line-height: 2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .poem p {
+            margin: 15px 0;
+        }
+
+        /* Memories Section */
+        .memories {
+            background: linear-gradient(135deg, #fff9f0, #fff5e8);
+            border-radius: 40px;
+            padding: 50px;
+            margin: 50px 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e8d5b5;
+        }
+
+        .memories h2 {
+            text-align: center;
+            color: #b8865e;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .memory-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .memory-item {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #c9a96e;
+            transition: all 0.3s ease;
+        }
+
+        .memory-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .memory-year {
+            color: #c9a96e;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .memory-text {
+            color: #5a3e2e;
+            line-height: 1.6;
+        }
+
+        /* Promises Section */
+        .promises {
+            background: linear-gradient(135deg, #f0e6d8, #f5ede3);
+            border-radius: 40px;
+            padding: 50px;
+            margin: 50px 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #d4c4a8;
+        }
+
+        .promises h2 {
+            color: #b8865e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+        }
+
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .promise-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid #e8d5b5;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .promise-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .promise-text {
+            color: #6b4c3a;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 40px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,245,235,0.8));
+            border-radius: 50px;
+            color: #8b5a2b;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .footer .big-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .message-section, .reasons, .poetry-section, .memories, .promises {
+                padding: 30px 20px;
+            }
+            
+            .message-section h2, .reasons h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Decorative elements */
+        .decorative-line {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="floral-border">✿ ✿ ✿</div>
+            <div class="heart-decoration">💖💕💗</div>
+            <h1>To My Dearest Bestie</h1>
+            <p>A friendship like ours is a treasure beyond measure</p>
+            <div class="decorative-line"></div>
+            <p>✨ Every moment with you is a beautiful memory ✨</p>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="gallery">
+            <!-- Photo 1 -->
+            <div class="photo-card">
+                <img src="image/pic1.png" alt="Bestie Photo 1" onerror="this.src='https://via.placeholder.com/400x320?text=Photo+1'">
+                <div class="card-content">
+                    <h3>✨ Beautiful Soul ✨</h3>
+                    <p>Your heart is pure gold, and your smile lights up the darkest days. You have a way of making everyone around you feel special and loved.</p>
+                    <div class="emoji-row">💖✨🌟💕</div>
+                </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-card">
+                <img src="image/pic2.png" alt="Bestie Photo 2" onerror="this.src='https://via.placeholder.com/400x320?text=Photo+2'">
+                <div class="card-content">
+                    <h3>🌸 Pure Joy 🌸</h3>
+                    <p>Your laughter is contagious, and your energy is infectious. Every adventure with you becomes a beautiful story to tell forever.</p>
+                    <div class="emoji-row">🌸💮🌺🌻</div>
+                </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo-card">
+                <img src="image/pic3.png" alt="Bestie Photo 3" onerror="this.src='https://via.placeholder.com/400x320?text=Photo+3'">
+                <div class="card-content">
+                    <h3>🌟 Amazing Friend 🌟</h3>
+                    <p>Through every storm and sunshine, you've stood by my side. Your loyalty and love are gifts I cherish every single day.</p>
+                    <div class="emoji-row">🌟⭐💫✨</div>
+                </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="photo-card">
+                <img src="image/pic4.png" alt="Bestie Photo 4" onerror="this.src='https://via.placeholder.com/400x320?text=Photo+4'">
+                <div class="card-content">
+                    <h3>💎 Precious 💎</h3>
+                    <p>Like a rare diamond, your friendship is priceless. Every memory we've created together is a treasure I'll keep forever.</p>
+                    <div class="emoji-row">💎💝💖💗</div>
+                </div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="photo-card">
+                <img src="image/pic5.png" alt="Bestie Photo 5" onerror="this.src='https://via.placeholder.com/400x320?text=Photo+5'">
+                <div class="card-content">
+                    <h3>🌈 My Rainbow 🌈</h3>
+                    <p>You color my world with happiness, laughter, and unconditional love. Thank you for being the amazing person you are!</p>
+                    <div class="emoji-row">🌈🎨💕💖</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Long Heartfelt Message -->
+        <div class="message-section">
+            <h2>💌 A Letter From My Heart 💌</h2>
+            <p>My dearest bestie,</p>
+            <p>Words cannot fully express how grateful I am to have you in my life. From the moment we became friends, I knew that God sent me an angel in human form. You've been my shoulder to cry on, my partner in laughter, and my biggest cheerleader through every chapter of my life.</p>
+            <p>Remember all those late-night talks, the uncontrollable laughter, the tears we've shared, and the dreams we've built together? Every single moment is etched in my heart forever. You've seen me at my best and worst, and you've loved me through it all without judgment.</p>
+            <p>Life is a beautiful journey, and having you by my side makes every step worthwhile. You inspire me to be better, to dream bigger, and to love harder. Your strength, kindness, and beautiful soul make this world a brighter place.</p>
+            <p>I pray that our friendship continues to grow and flourish for many more years. May we create countless more memories, share endless laughter, and support each other through all of life's adventures.</p>
+            <p>Thank you for being YOU - wonderfully, beautifully, and perfectly you. There is no one else like you, and I'm so blessed to call you my best friend.</p>
+            <div class="signature">
+                Forever and always,<br>
+                Your Bestie 💕
+            </div>
+        </div>
+
+        <!-- Reasons Why You're Amazing -->
+        <div class="reasons">
+            <h2>🌈 50 Reasons Why You're Amazing 🌈</h2>
+            <div class="reasons-grid">
+                <div class="reason-item">
+                    <div class="reason-icon">💖</div>
+                    <div class="reason-text">You have the kindest heart I know</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">🤗</div>
+                    <div class="reason-text">Your hugs can heal any pain</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">🎉</div>
+                    <div class="reason-text">You make every moment unforgettable</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">💪</div>
+                    <div class="reason-text">You're incredibly strong and resilient</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">🎨</div>
+                    <div class="reason-text">You're unique and irreplaceable</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">💕</div>
+                    <div class="reason-text">Your friendship is my greatest gift</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">😊</div>
+                    <div class="reason-text">Your smile brightens my darkest days</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">🎵</div>
+                    <div class="reason-text">You understand me without words</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">🌙</div>
+                    <div class="reason-text">You stay up late when I need you</div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon">💭</div>
+                    <div class="reason-text">You believe in my dreams</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beautiful Poetry Section -->
+        <div class="poetry-section">
+            <h2>🌸 A Poem For You 🌸</h2>
+            <div class="poem">
+                <p>A friend like you is rare and true,<br>
+                A golden heart through and through.<br>
+                Through every storm and sunny weather,<br>
+                Our friendship grows stronger together.</p>
+                
+                <p>You lift me up when I am down,<br>
+                You turn my frown into a crown.<br>
+                With you, life's a beautiful song,<br>
+                A melody where I belong.</p>
+                
+                <p>So here's to us, my dearest friend,<br>
+                A bond that nothing can ever bend.<br>
+                Thank you for being my guiding light,<br>
+                My forever friend, my heart's delight.</p>
+            </div>
+            <div class="decorative-line"></div>
+            <p style="margin-top: 20px; font-style: italic; color: #b8865e;">~ Written with love just for you ~</p>
+        </div>
+
+        <!-- Beautiful Memories -->
+        <div class="memories">
+            <h2>📖 Our Beautiful Memories 📖</h2>
+            <div class="memory-list">
+                <div class="memory-item">
+                    <div class="memory-year">✨ The Day We Met ✨</div>
+                    <div class="memory-text">That beautiful day when our souls connected, and I knew I had found a friend for life. A moment I'll never forget.</div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-year">💕 Our Adventures 💕</div>
+                    <div class="memory-text">All the crazy adventures, spontaneous road trips, and unforgettable experiences we've shared together.</div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-year">🌟 Through Thick & Thin 🌟</div>
+                    <div class="memory-text">Every challenge we've faced together, every tear we've wiped away, every victory we've celebrated as one.</div>
+                </div>
+                <div class="memory-item">
+                    <div class="memory-year">💖 Endless Laughter 💖</div>
+                    <div class="memory-text">The nights we couldn't stop laughing until our stomachs hurt. Those are the moments I treasure most.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promises Section -->
+        <div class="promises">
+            <h2>💫 My Promises To You 💫</h2>
+            <div class="promise-grid">
+                <div class="promise-card">
+                    <div class="promise-icon">🤝</div>
+                    <div class="promise-text">I promise to always be there for you, no matter what life brings our way.</div>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">💪</div>
+                    <div class="promise-text">I promise to support your dreams and celebrate your victories.</div>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">😢</div>
+                    <div class="promise-text">I promise to wipe your tears and be your shoulder to cry on.</div>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">😂</div>
+                    <div class="promise-text">I promise to make you laugh when you need it most.</div>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">💖</div>
+                    <div class="promise-text">I promise to cherish our friendship for all eternity.</div>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">🌟</div>
+                    <div class="promise-text">I promise to always be your biggest fan and cheerleader.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="heart-decoration">💖💕💗</div>
+            <p class="big-text">"A true friend is the greatest of all blessings"</p>
+            <p>Thank you for being my blessing, my rock, and my forever friend</p>
+            <p style="margin-top: 20px;">Made with infinite love 💖 just for you, my amazing bestie</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">✨ You are loved more than words can express ✨</p>
+            <div class="floral-border" style="margin-top: 20px;">✿ ✿ ✿</div>
+        </div>
+    </div>
+
+    <script>
+        // Add console message
+        console.log('%c💖 Welcome to Bestie Gallery! 💖', 'color: #b8865e; font-size: 16px; font-weight: bold;');
+        console.log('%c✨ Made with love for the most amazing bestie ever ✨', 'color: #c9a96e; font-size: 14px;');
+        
+        // Add image error handling
+        const images = document.querySelectorAll('.photo-card img');
+        images.forEach(img => {
+            img.addEventListener('error', function() {
+                console.log('Image not found: ' + this.src);
+                this.src = 'https://via.placeholder.com/400x320?text=📸+Photo+Here';
+            });
+        });
+    </script>
+</body>
+</html>
